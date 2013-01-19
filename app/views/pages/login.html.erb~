@@ -1,0 +1,18 @@
+<div>
+  <h1>Welcome</h1>
+  <div id="login_columns_holder">
+    <div id="left_column">
+      <h2>What is CareerCriteria?</h2>
+      <p>CareerCriteria is the easiest way to apply for jobs that fit you and manage your career.</p> 
+      <p>After logging in and filling in information about your past employment, education and references, your criteria will begin matching to current openings. These openings are selected individually for you and ranked by the proprietary CareerEngine based on your qualifications and requirements for openings.</p>
+      <p>To sign up, please head to our <a href="sign_up">new user page.</a></p>
+      <h2>How much does it cost to use CareerCriteria?</h2>
+      <p>CareerCriteria is a free service for job seekers. It is designed to make job searching easy.</p>
+      <p>To post an opening, please <a href="/pages/contact">step into our office...</a></p>
+    </div>
+    <div id="right_column" style="padding-right:30px;">
+      <h2>Career Criteria in the News</h2>
+      <p>Most recent press / endorsements</p>
+    </div>
+  </div>
+</div>

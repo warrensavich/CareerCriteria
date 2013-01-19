@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  owner_id: 1
+  connection_id: 1
+  relationship: MyString
+  string: MyString
+
+two:
+  owner_id: 1
+  connection_id: 1
+  relationship: MyString
+  string: MyString

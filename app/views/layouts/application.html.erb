@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CareerCriteria</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+</head>
+<body>
+  <div id="container">
+      <div id="header_holder">
+	<div id="header" class="bg rounded-bottom">
+	  <div id="header_content">
+	    <div id="logo_holder">
+	      <a href="/pages/home"><h1>CareerCriteria</h1></a>
+	    </div>
+	    <div id="user_nav">
+	      <% if current_user %>
+	      Logged in as <a href="/users/<%= current_user.id %>/edit">
+		<%= current_user.first_name %>&nbsp;<%= current_user.last_name %></a>
+	      <br />
+	      <%= link_to "Log out", log_out_path %>
+	      <% else %>
+	      <%= link_to "Sign up", sign_up_path %> or
+	      <%= link_to "log in", log_in_path %>
+	      <% end %>
+	    </div>
+	    
+	    <% flash.each do |name, msg| %>
+	    <%= content_tag :div, msg, :id => "flash_#{name}" %>
+	    <% end %>
+	  </div>
+	</div>
+      </div>
+      <div id="body_holder">
+	<div id="body" class="bg rounded-bottom rounded-top">
+	  <%= yield %>
+	  </div>
+      </div>
+      <div id="footer_holder">
+	<div id="footer" class="bg rounded-top">
+	  <div id="footer_left">&copy;&nbsp;2013&nbsp;CareerCriteria</div>
+	  <div id="footer_right"><a href="/contact">Contact CareerCriteria&nbsp;&raquo;</a></div>
+	</div>
+      </div>
+  </div>
+</body>
+</html>

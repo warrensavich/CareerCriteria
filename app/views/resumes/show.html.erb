@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Owner user:</b>
+  <%= @resume.owner_user %>
+</p>
+
+<p>
+  <b>Note:</b>
+  <%= @resume.note %>
+</p>
+
+<p>
+  <b>Link:</b>
+  <%= @resume.link %>
+</p>
+
+<p>
+  <b>Languages spoken:</b>
+  <%= @resume.languages_spoken %>
+</p>
+
+
+<%= link_to 'Edit', edit_resume_path(@resume) %> |
+<%= link_to 'Back', resumes_path %>

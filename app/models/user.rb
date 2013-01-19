@@ -1,0 +1,35 @@
+class User < ActiveRecord::Base
+  attr_accessible :city, :company_id, :country, :email, :first_name, :job_title, :last_name, :login_id, :password, :state, :street_address, :title, :will_relocate, :will_travel, :zip, :password, :password_confirmation
+  belongs_to :company
+  has_many :jobs
+  has_one :image
+  has_many :user_favorite_compaies, :dependent => :destroy
+  has_many :user_connections, :dependent => :destroy
+  has_many :user_favorite_matches, :dependent => :destroy
+
+  attr_accessor :password
+  attr_reader :password
+  before_save :encrypt_password
+  
+  validates_confirmation_of :password
+  validates_presence_of :password, :on => :create
+  validates_presence_of :email
+  validates_uniqueness_of :email
+  
+  def self.authenticate(email, password)
+    user = find_by_email(email)
+    if user && user.password_hash == BCrypt::Engine.hash_secret(password, user.password_salt)
+      user
+    else
+      nil
+    end
+  end
+  
+  def encrypt_password
+    if password.present?
+      self.password_salt = BCrypt::Engine.generate_salt
+      self.password_hash = BCrypt::Engine.hash_secret(password, password_salt)
+    end
+  end
+  
+end

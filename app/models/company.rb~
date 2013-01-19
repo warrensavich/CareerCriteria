@@ -1,0 +1,3 @@
+class Company < ActiveRecord::Base
+  attr_accessible :average_rating, :bbb_link, :city, :country, :description, :name, :password_to_join, :state, :street_address, :url, :zip
+end

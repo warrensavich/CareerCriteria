@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  owner_user: 1
+  note: MyText
+  link: MyString
+  languages_spoken: MyString
+
+two:
+  owner_user: 1
+  note: MyText
+  link: MyString
+  languages_spoken: MyString

@@ -1,0 +1,51 @@
+<h1>Listing users</h1>
+
+<table>
+  <tr>
+    <th>Password</th>
+    <th>Login</th>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Title</th>
+    <th>Email</th>
+    <th>Street address</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Zip</th>
+    <th>Country</th>
+    <th>Job title</th>
+    <th>Company</th>
+    <th>Will relocate</th>
+    <th>Will travel</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @users.each do |user| %>
+  <tr>
+    <td><%= user.password %></td>
+    <td><%= user.login_id %></td>
+    <td><%= user.first_name %></td>
+    <td><%= user.last_name %></td>
+    <td><%= user.title %></td>
+    <td><%= user.email %></td>
+    <td><%= user.street_address %></td>
+    <td><%= user.city %></td>
+    <td><%= user.state %></td>
+    <td><%= user.zip %></td>
+    <td><%= user.country %></td>
+    <td><%= user.job_title %></td>
+    <td><%= user.company_id %></td>
+    <td><%= user.will_relocate %></td>
+    <td><%= user.will_travel %></td>
+    <td><%= link_to 'Show', user %></td>
+    <td><%= link_to 'Edit', edit_user_path(user) %></td>
+    <td><%= link_to 'Destroy', user, :method => :delete, :data => { :confirm => 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New User', new_user_path %>

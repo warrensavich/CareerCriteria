@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  owner_resume_id: 1
+  degree_type: MyString
+  degree_title: MyString
+  description: MyText
+  state: MyString
+  college: MyString
+  year: 1
+  gpa: 1.5
+  minor: MyString
+  minor_description: MyText
+  pending: false
+
+two:
+  owner_resume_id: 1
+  degree_type: MyString
+  degree_title: MyString
+  description: MyText
+  state: MyString
+  college: MyString
+  year: 1
+  gpa: 1.5
+  minor: MyString
+  minor_description: MyText
+  pending: false

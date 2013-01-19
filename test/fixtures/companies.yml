@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  description: MyText
+  average_rating: 1.5
+  street_address: MyString
+  city: MyString
+  state: MyString
+  zip: 1
+  country: MyString
+  bbb_link: MyString
+  url: MyString
+  password_to_join: MyString
+
+two:
+  name: MyString
+  description: MyText
+  average_rating: 1.5
+  street_address: MyString
+  city: MyString
+  state: MyString
+  zip: 1
+  country: MyString
+  bbb_link: MyString
+  url: MyString
+  password_to_join: MyString

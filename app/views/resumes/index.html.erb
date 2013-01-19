@@ -1,0 +1,29 @@
+<h1>Listing resumes</h1>
+
+<table>
+  <tr>
+    <th>Owner user</th>
+    <th>Note</th>
+    <th>Link</th>
+    <th>Languages spoken</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @resumes.each do |resume| %>
+  <tr>
+    <td><%= resume.owner_user %></td>
+    <td><%= resume.note %></td>
+    <td><%= resume.link %></td>
+    <td><%= resume.languages_spoken %></td>
+    <td><%= link_to 'Show', resume %></td>
+    <td><%= link_to 'Edit', edit_resume_path(resume) %></td>
+    <td><%= link_to 'Destroy', resume, :method => :delete, :data => { :confirm => 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Resume', new_resume_path %>

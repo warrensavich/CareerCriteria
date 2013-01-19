@@ -1,0 +1,49 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  company_id: 1
+  positng_user: 1
+  job_type: MyString
+  hours: MyString
+  start_date: 2012-11-03
+  end_date: 2012-11-03
+  description: MyText
+  education_requirement: MyString
+  education_field_of_study: MyString
+  years_experience: 1
+  reference_count: 1
+  zip: 1
+  remote_available: false
+  title: MyString
+  department: MyString
+  environment: MyText
+  dress_code: MyText
+  travel: 1
+  current: false
+  past: false
+  open: false
+  date_filled: 2012-11-03
+
+two:
+  company_id: 1
+  positng_user: 1
+  job_type: MyString
+  hours: MyString
+  start_date: 2012-11-03
+  end_date: 2012-11-03
+  description: MyText
+  education_requirement: MyString
+  education_field_of_study: MyString
+  years_experience: 1
+  reference_count: 1
+  zip: 1
+  remote_available: false
+  title: MyString
+  department: MyString
+  environment: MyText
+  dress_code: MyText
+  travel: 1
+  current: false
+  past: false
+  open: false
+  date_filled: 2012-11-03

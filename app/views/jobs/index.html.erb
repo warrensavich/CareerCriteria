@@ -1,0 +1,65 @@
+<h1>Listing jobs</h1>
+
+<table>
+  <tr>
+    <th>Company</th>
+    <th>Positng user</th>
+    <th>Job type</th>
+    <th>Hours</th>
+    <th>Start date</th>
+    <th>End date</th>
+    <th>Description</th>
+    <th>Education requirement</th>
+    <th>Education field of study</th>
+    <th>Years experience</th>
+    <th>Reference count</th>
+    <th>Zip</th>
+    <th>Remote available</th>
+    <th>Title</th>
+    <th>Department</th>
+    <th>Environment</th>
+    <th>Dress code</th>
+    <th>Travel</th>
+    <th>Current</th>
+    <th>Past</th>
+    <th>Open</th>
+    <th>Date filled</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @jobs.each do |job| %>
+  <tr>
+    <td><%= job.company_id %></td>
+    <td><%= job.positng_user %></td>
+    <td><%= job.job_type %></td>
+    <td><%= job.hours %></td>
+    <td><%= job.start_date %></td>
+    <td><%= job.end_date %></td>
+    <td><%= job.description %></td>
+    <td><%= job.education_requirement %></td>
+    <td><%= job.education_field_of_study %></td>
+    <td><%= job.years_experience %></td>
+    <td><%= job.reference_count %></td>
+    <td><%= job.zip %></td>
+    <td><%= job.remote_available %></td>
+    <td><%= job.title %></td>
+    <td><%= job.department %></td>
+    <td><%= job.environment %></td>
+    <td><%= job.dress_code %></td>
+    <td><%= job.travel %></td>
+    <td><%= job.current %></td>
+    <td><%= job.past %></td>
+    <td><%= job.open %></td>
+    <td><%= job.date_filled %></td>
+    <td><%= link_to 'Show', job %></td>
+    <td><%= link_to 'Edit', edit_job_path(job) %></td>
+    <td><%= link_to 'Destroy', job, :method => :delete, :data => { :confirm => 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Job', new_job_path %>

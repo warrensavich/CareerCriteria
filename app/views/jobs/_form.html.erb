@@ -1,0 +1,105 @@
+<%= form_for(@job) do |f| %>
+  <% if @job.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@job.errors.count, "error") %> prohibited this job from being saved:</h2>
+
+      <ul>
+      <% @job.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :company_id %><br />
+    <%= f.number_field :company_id %>
+  </div>
+  <div class="field">
+    <%= f.label :positng_user %><br />
+    <%= f.number_field :positng_user %>
+  </div>
+  <div class="field">
+    <%= f.label :job_type %><br />
+    <%= f.text_field :job_type %>
+  </div>
+  <div class="field">
+    <%= f.label :hours %><br />
+    <%= f.text_field :hours %>
+  </div>
+  <div class="field">
+    <%= f.label :start_date %><br />
+    <%= f.date_select :start_date %>
+  </div>
+  <div class="field">
+    <%= f.label :end_date %><br />
+    <%= f.date_select :end_date %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :education_requirement %><br />
+    <%= f.text_field :education_requirement %>
+  </div>
+  <div class="field">
+    <%= f.label :education_field_of_study %><br />
+    <%= f.text_field :education_field_of_study %>
+  </div>
+  <div class="field">
+    <%= f.label :years_experience %><br />
+    <%= f.number_field :years_experience %>
+  </div>
+  <div class="field">
+    <%= f.label :reference_count %><br />
+    <%= f.number_field :reference_count %>
+  </div>
+  <div class="field">
+    <%= f.label :zip %><br />
+    <%= f.number_field :zip %>
+  </div>
+  <div class="field">
+    <%= f.label :remote_available %><br />
+    <%= f.check_box :remote_available %>
+  </div>
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :department %><br />
+    <%= f.text_field :department %>
+  </div>
+  <div class="field">
+    <%= f.label :environment %><br />
+    <%= f.text_area :environment %>
+  </div>
+  <div class="field">
+    <%= f.label :dress_code %><br />
+    <%= f.text_area :dress_code %>
+  </div>
+  <div class="field">
+    <%= f.label :travel %><br />
+    <%= f.number_field :travel %>
+  </div>
+  <div class="field">
+    <%= f.label :current %><br />
+    <%= f.check_box :current %>
+  </div>
+  <div class="field">
+    <%= f.label :past %><br />
+    <%= f.check_box :past %>
+  </div>
+  <div class="field">
+    <%= f.label :open %><br />
+    <%= f.check_box :open %>
+  </div>
+  <div class="field">
+    <%= f.label :date_filled %><br />
+    <%= f.date_select :date_filled %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
